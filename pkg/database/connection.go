@@ -10,7 +10,7 @@ type Postgres struct {
 }
 
 func Connect() (*sql.DB, error) {
-	dsn := "user=postgres dbname=postgres password=mysecretpassword sslmode=disable";
+	dsn := " host=fullstack-postgres port=5432 user=postgres dbname=fullstack_api sslmode=disable password=mysecretpassword";
 	db, err := sql.Open("postgres", dsn);
 	if err != nil {
 		return nil, err
